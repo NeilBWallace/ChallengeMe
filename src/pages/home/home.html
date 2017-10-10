@@ -3,12 +3,46 @@
     <ion-title>
       Ionic Blank
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="this.afAuth.auth.signOut()">
+        <ion-icon name="power"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-input [(ngModel)]="myInput"></ion-input>
+  </ion-item>
+
+  <video #myvideo height="300" width="300" controls  ></video>
+
+  <button ion-button (click)="capture()">Lets take a picture!</button>
+  <img [src]="captureDataUrl" *ngIf="captureDataUrl"/>
+  <button ion-button full (click)="AddRecord()">Save Record</button>
+  <button ion-button full (click)="UploadVideo()">Upload Video</button>
+  <button ion-button full (click)="StartVideo()">Start Video</button>
+  
+  <button ion-button full (click)="takePicture()">Take Picture</button>
+  <button ion-button full (click)="downloadImageUrls()">Show Images</button>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-4 col-md-3 col-lg-2 *ngFor="let image of imageUrls">
+        <img [src]="image" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<!--
+  <ion-item @ngFor="let item of arrData;let i = index"> 
+     {{item.$value}}
+  </ion-item>    
+-->
+<ion-list>
+    <ion-item *ngFor="let item of arrData; let i = index" (click)="delete(i)">
+      {{item.$value}}
+    </ion-item>
+  </ion-list>
+
+
 </ion-content>
