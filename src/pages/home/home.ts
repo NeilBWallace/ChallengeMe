@@ -1,6 +1,7 @@
 import { Component,ViewChild } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { NavController } from 'ionic-angular';
+import {ChallengePage} from '../challenge/challenge';
 //import { Camera, CameraOptions } from '@ionic-native/camera';
 //import { ImageProvider } from '../../providers/image-provider';
 //import { AngularFireDatabase } from 'angularfire2/database';
@@ -16,7 +17,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+challenge=ChallengePage;
 
 
   private images = [];
@@ -82,6 +83,11 @@ public Fbref:any;
     
   //this.streamingMedia.playVideo("https://firebasestorage.googleapis.com/v0/b/challenge-me-11dcc.appspot.com/o/vid?alt=media&token=5a5c88ef-b2f7-4b71-960f-8aa7f44bcdc8");
   //this.streamingMedia.playVideo("http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_10mb.mp4");
+  }
+
+  MakeAChallenge()
+  {
+
   }
 
   signOut() {
