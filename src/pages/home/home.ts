@@ -1,5 +1,5 @@
 import { Component,ViewChild } from '@angular/core';
-//import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { NavController } from 'ionic-angular';
 //import { Camera, CameraOptions } from '@ionic-native/camera';
 //import { ImageProvider } from '../../providers/image-provider';
@@ -33,10 +33,11 @@ myInput;
 public Fbref:any;
 
   constructor(
+    private auth: AngularFireAuth,
  //   private streamingMedia: StreamingMedia,
   //  private fd: AngularFireDatabase,
     private navCtrl: NavController,
-  //  private afAuth: AngularFireAuth,
+   private afAuth: AngularFireAuth,
  //   private camera: Camera,
  //   private imageSrv: ImageProvider
   ) {
@@ -83,7 +84,9 @@ public Fbref:any;
   //this.streamingMedia.playVideo("http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_10mb.mp4");
   }
 
-
+  signOut() {
+    this.auth.auth.signOut();
+  }
   AddRecord(){
    // this.fd.list("/records/").push(this.myInput)
   }

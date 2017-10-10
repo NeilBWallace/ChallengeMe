@@ -1,8 +1,30 @@
 page-signup {
+    .continue
+    {
+        margin-top: 30%;
+        display:inline-block; //Typically a button wouldn't need its own line        
+        margin:0 auto;
+        background-color: transparent;
+        text-align: center;
+    }
+
     .bg{
         background-image: url('../assets/frontpage.png');
       background-size: no-repeat;
       background-position:center;
       background-size:contain;
   }
+  .item.item-trns {
+//	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+	color: white; 
+}
+  ionlist,ion-label,ion-input{
+      background-color: transparent;
+  }
+}
+.item.item-trns {
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+	color: white; 
 }

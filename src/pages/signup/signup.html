@@ -5,19 +5,29 @@
 </ion-header>
 
 <ion-content padding class="bg">
-  <ion-list>
-    <ion-item>
-      <ion-label floating>E-Mail</ion-label>
-      <ion-input type="email" [(ngModel)]="signupData.email"></ion-input>
+  <ion-list class="item item-trns"  >
+    <ion-item class="item  item-trns" >
+      <ion-label class="item item-trns" floating>E-Mail</ion-label>
+      <ion-input class="item item-trns" type="email" [(ngModel)]="signupData.email"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="signupData.password"></ion-input>
+    <ion-item class="item item-trns" >
+      <ion-label class="item item-trns" floating>Password</ion-label>
+      <ion-input item class="item-trns" type="password" [(ngModel)]="signupData.password"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label floating>Re-Enter Password</ion-label>
-      <ion-input type="password" [(ngModel)]="signupData.passwordRetyped"></ion-input>
+    <ion-item class="item item-trns" >
+      <ion-label class="item item-trns" floating>Re-Enter Password</ion-label>
+      <ion-input class="item item-trns" type="password" [(ngModel)]="signupData.passwordRetyped"></ion-input>
     </ion-item>
   </ion-list>
+  <ion-row  center>
+      <ion-col text-center>
+  <button class="continue" (click)="signup()"  [disabled]="!signupData.email || !signupData.password || !signupData.passwordRetyped">
+      <img src="assets/continue.png" height="130">
+ </button>
+ </ion-col>
+</ion-row>
+<!--
   <button full ion-button (click)="signup()" [disabled]="!signupData.email || !signupData.password || !signupData.passwordRetyped">Signup</button>
+-->
+
 </ion-content>
