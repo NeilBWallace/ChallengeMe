@@ -1,7 +1,8 @@
 <ion-header>
+<!--
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+    Challenge Me
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="this.afAuth.auth.signOut()">
@@ -9,9 +10,13 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+-->
 </ion-header>
 
-<ion-content padding>
+  
+<ion-content padding class="bg" > 
+  
+  <!--
   <ion-item>
     <ion-input [(ngModel)]="myInput"></ion-input>
   </ion-item>
@@ -20,10 +25,27 @@
 
   <button ion-button (click)="capture()">Lets take a picture!</button>
   <img [src]="captureDataUrl" *ngIf="captureDataUrl"/>
-  <button ion-button full (click)="AddRecord()">Save Record</button>
-  <button ion-button full (click)="UploadVideo()">Upload Video</button>
-  <button ion-button full (click)="StartVideo()">Start Video</button>
-  
+-->
+<ion-row  center>
+    <ion-col >
+<button class="continue" (click)="click()" >
+    <img src="assets/topbutton.png" height="70">
+</button>
+</ion-col>
+</ion-row>
+  <button class="bt bt1" button-block round ion-button full (click)="AddRecord()">Save Record</button>
+  <button class="bt" round ion-button full (click)="UploadVideo()">Upload Video</button>
+  <button class="bt bt3" round ion-button full (click)="StartVideo()">Start Video</button>
+  <ion-row  center>
+      <ion-col text-center>
+  <button class="continue" (click)="click()" >
+      <img src="assets/continue.png" height="130">
+ </button>
+ </ion-col>
+</ion-row>
+
+
+  <!--
   <button ion-button full (click)="takePicture()">Take Picture</button>
   <button ion-button full (click)="downloadImageUrls()">Show Images</button>
   <ion-grid>
@@ -33,16 +55,16 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-<!--
+
   <ion-item @ngFor="let item of arrData;let i = index"> 
      {{item.$value}}
   </ion-item>    
--->
+
 <ion-list>
     <ion-item *ngFor="let item of arrData; let i = index" (click)="delete(i)">
       {{item.$value}}
     </ion-item>
   </ion-list>
-
+-->
 
 </ion-content>
