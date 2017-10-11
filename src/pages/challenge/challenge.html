@@ -14,5 +14,10 @@
 
 
 <ion-content padding class="bg">
+    <button ion-button (click)="playVideo()">Play Video</button>
+    <button ion-button (click)="stopPlayingVideo()">Stop playing Video</button>
 
+  <button ion-button full (click)="Challenge()">Challenge</button>
+  <button ion-button full (click)="Select()">Select</button>
+  <video #myvideo  ></video>
 </ion-content>
