@@ -85,9 +85,11 @@ public Fbref:any;
   //this.streamingMedia.playVideo("http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_10mb.mp4");
   }
 
+
+
   MakeAChallenge()
   {
-
+this.navCtrl.push(ChallengePage)
   }
 
   signOut() {

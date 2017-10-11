@@ -9,7 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
+import { ChallengePage } from '../pages/challenge/challenge';
 var config = {
   apiKey: "AIzaSyCE8z153bgKkDLJeGLRhIUrH4BC_7RLzU4",
   authDomain: "challenge-me-11dcc.firebaseapp.com",
@@ -24,7 +24,8 @@ var config = {
     MyApp,
     HomePage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    ChallengePage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +38,8 @@ var config = {
     LoginPage,
     SignupPage,
     MyApp,
-    HomePage
+    HomePage,
+    ChallengePage
   ],
   providers: [
     StatusBar,
